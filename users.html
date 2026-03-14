@@ -784,6 +784,10 @@ async function init() {
   // تهيئة التطبيق
   await window.initApp();
   
+  // إخفاء الإشعارات في صفحات الإدارة
+  const _bell = document.getElementById('_notifBell');
+  if (_bell) _bell.remove();
+  
   // تحميل البيانات
   await loadAllData();
   
